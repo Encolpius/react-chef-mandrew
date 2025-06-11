@@ -30,6 +30,8 @@ const recipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model('Recipe', recipeSchema)
 
+// Below is an example of how to write a recipe
+/*
 const recipe = new Recipe(
     {
         "name": "Buttermilk Biscuits",
@@ -63,6 +65,7 @@ const recipe = new Recipe(
         "recipeId": 2,
     },
 )
+*/
 
 if (process.argv.length < 4) {
     Recipe.find({}).then(result => {
