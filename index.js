@@ -88,6 +88,10 @@ app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
 
+app.get('/cookbooks', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
 app.get('/about-me', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'about-me.html')); 
 })
