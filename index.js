@@ -4,6 +4,8 @@ const path = require('path')
 const cors = require('cors')
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'dist')))
+import { useParams } from 'react-router-dom'
+const { id } = useParams()
 let cookbook = [
     {
         "name": "Buttermilk Biscuits",
@@ -27,12 +29,12 @@ let cookbook = [
             "Brush the tops of the dough lightly with buttermilk. Bake for 15 to 18 minutes, rotating the pan halfway through baking, until a rich golden brown. As soon as you remove the biscuits from the oven, brush the tops with melted butter. Serve warm."
             ],
             "updated": [
-            "Preheat the oven to 425 degrees. Line a baking sheet with parchment paper. Placed the butter cut into cubes in the freezer.",
+            "Preheat the oven to 425 degrees. Line a baking sheet with parchment paper. Place the butter cut into cubes in the freezer.",
             "Combine the flours, salt, baking powder, and baking soda in the bowl of a food processor and pulse a few times to blend. Add the chilled butter and pulse 5 times, holding one second per pulse, until the pieces of butter are no bigger than small peas. The dough should not come together.",
             "Transfer the dough to a large bowl and make a well in the center of the flour mixture. Pour in the buttermilk. Makre sure to empty all the buttermilk into the well. Stir and lift the mixture with a sturdy spoon, gently working the flour into the buttermilk. The dough should begin to come together but not form a solid mass, or the biscuits may be tough.",
             "Dust a work surface with flour and turn out the dough. Pat the dough into a 3/4-inch-thick rectangle; do not knead. Divide into four and stack each square on top of each other; use a rolling pin to gently roll out into a rectangle again about 2 inches tall",
             "Set aside a small bowl of flour. Using a 2.5-inch round cutter, cut out the biscuits; if the cutter sticks to the dough, dip the cutter in flour before cutting. Place the biscuits on the baking sheet. The dough trimmings can be gently pushed together, patted out, and cut one more time",
-            "Brush the tops of the dough lightly with buttermilk. Bake for 15 to 18 minutes, rotating the pan halfway through baking, until a rich golden brown. As soon as you remove the biscuits from the oven, brush half the tops with melted butter; Alexi prefers several to not have the additional butter. Add sea salt, if desired. Serve warm."
+            "Brush the tops of the dough lightly with buttermilk. Bake for 15 to 18 minutes, rotating the pan halfway through baking, until a rich golden brown. As soon as you remove the biscuits from the oven, brush half the tops with melted butter; Alexi prefers several to not have the additional butter. Add fleur de sel salt, if desired. Serve warm."
             ]
         },
         "amount": "Makes 12 biscuits",
