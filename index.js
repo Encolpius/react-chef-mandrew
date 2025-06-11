@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom'
 const express = require('express')
 const app = express()
 const path = require('path')
 const cors = require('cors')
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'dist')))
+
 let cookbook = [
     {
         "name": "Buttermilk Biscuits",
@@ -59,7 +59,8 @@ let cookbook = [
                 "Cut both ends off each ear of corn, and cut the ears in half. Cutting the ears of corn takes longer than you would expect.",
                 "Bring a large pot of water to a boil and add one tablespoon of salt. Add the corn and cook for 5 to 7 minutes, or until the corn is tender.",
                 "Meanwhile, transfer about 2 tablespoons of the cooking water to a large wide heatproof bowl. Add the butter and swirl the bowl over the heat to emulsify. Add lime salt to taste, swirling the bowl to maintain the emulsification. Set aside in a warm spot.",
-                "Drain the corn well and add it to the butter. Sprinkle in the chives. Swirl the bowl to coat the corn evenly. Sprinkle with additional lime salt, and serve the remaining salt on the side."
+                "Drain the corn well and add it to the butter. Sprinkle in the chives. Swirl the bowl to coat the corn evenly. Sprinkle with additional lime salt.",
+                "Serve additional lime salt on the side. Adding some lime salt at the table takes this to another level."
             ]
         },
         "amount": "Serves 6",
@@ -102,13 +103,11 @@ app.get('/api/ad-hoc', (request, response) => {
 })
 
 app.get('/recipe/:id', (request, response) => {
-    const { id } = useParams()
     const recipe = cookbook.find(r => r.id === id)
     response.json(recipe)
 })
 
 app.get('/api/ad-hoc/:id', (request, response) => {
-    const id = request.params.id
     const recipe = cookbook.find(recipe => recipe.id === id)
     recipe ? response.json(note) : response.status(404).end()
 })
