@@ -1,11 +1,10 @@
+import { useParams } from 'react-router-dom'
 const express = require('express')
 const app = express()
 const path = require('path')
 const cors = require('cors')
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'dist')))
-import { useParams } from 'react-router-dom'
-const { id } = useParams()
 let cookbook = [
     {
         "name": "Buttermilk Biscuits",
@@ -103,6 +102,7 @@ app.get('/api/ad-hoc', (request, response) => {
 })
 
 app.get('/recipe/:id', (request, response) => {
+    const { id } = useParams()
     const recipe = cookbook.find(r => r.id === id)
     response.json(recipe)
 })
