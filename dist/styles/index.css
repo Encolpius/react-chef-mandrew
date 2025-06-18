@@ -18,7 +18,14 @@ body {
 .container {
   margin: 0 auto;
   padding: 21px;
-  width: 70%;
+  width: 80%;
+}
+
+.cookbook-name {
+  text-align: center;
+  margin-bottom: 6px;
+  color: #c8c8c8;
+  font-weight: 300;
 }
 
 .recipe-container {
@@ -32,6 +39,10 @@ body {
   padding: 0 10px 0 10px;
 }
 
+.ingredients-list-container {
+  flex: 1 0 280px;
+}
+
 .recipe-instructions-list,
 .recipe-toggle {
   list-style-type: none;
@@ -40,6 +51,7 @@ body {
 .recipe-toggle {
   padding-left: 0;
   text-align: center;
+  font-weight: 600;
 }
 
 .recipe-toggle li {
@@ -68,7 +80,8 @@ body {
 .recipe-name {
   text-align: center;
   margin-bottom: 6px;
-  font-size: 26px;
+  margin-top: 6px;
+  font-size: 30px;
   letter-spacing: 2px;
 }
 
@@ -100,14 +113,59 @@ body {
   text-align: right;
 }
 
+@media (max-width: 1500px) {
+  .container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 1091px) {
+  #root {
+    width: 90%;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  .recipe-summary {
+    padding: 16px;
+  }
+
+  .recipe-instructions-list {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    padding-left: 0;
+  }
+  
   .recipe-container {
     flex-direction: column;
+  }
+
+  .ingredients-list-container {
+    flex: 1 2;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  #nav li {
+    margin: 12px;
   }
 
   .ingredients-list {
     text-align: center;
     padding: 0 22px 0 22px;
+  }
+
+  .amount {
+    text-align: center;
   }
 }
 
@@ -122,4 +180,8 @@ a {
 
 .centered-text {
   text-align: center;
+}
+
+.recipe-toggle .active {
+  color: blue;
 }
