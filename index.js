@@ -16,6 +16,10 @@ app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
 
+app.get('/home', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
 app.get('/cookbooks', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
@@ -24,17 +28,21 @@ app.get('/about-me', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'about-me.html')); 
 })
 
-app.get('/api/ad-hoc', (request, response) => {
-    Recipe.find({}).then(recipes => {
-        response.json(recipes)
-    })
+app.get('/api/cookbooks/:cookbookName/', (request, response) => {
+    Recipe.find( { title: request.params.cookbookName })
+        .then(recipe => {
+            if (recipe) {
+                response.json(recipe)
+            } else {
+                response.status(404).end()
+            }
+        })
+        .catch(error => console.log(error))
 })
 
-app.get('/recipe/:recipeId', (request, response) => {
-    console.log('here')
-    Recipe.findOne(request.params.recipeId)
+app.get('/api/cookbooks/:cookbookName/recipe/:recipeId', (request, response) => {
+    Recipe.find( { title: request.params.cookbookName, recipeId: request.params.recipeId })
         .then(recipe => {
-            console.log(recipe)
             if (recipe) {
                 response.json(recipe)
             } else {

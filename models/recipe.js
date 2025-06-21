@@ -19,6 +19,7 @@ mongoose.connect(url)
 mongoose.set('strictQuery', false)
 
 const recipeSchema = new mongoose.Schema({
+    title: String,
     name: String,
     summary: String,
     ingredients: Array,
@@ -34,6 +35,7 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
+        "title": "ad-hoc-at-home",
         "name": "Grissini",
         "summary": "Simple breadsticks, fun to hold, satisfyingly crunchy. You can take these breadsticks in numerous directions, flattening them for a different texture, or using different oils - garlic rather than plain olive oil, for instance - different seasoning, or chopped herbs. These go well with salads, such as a tomato salad where you want some contrasting texture.",
         "ingredients": [
@@ -64,10 +66,19 @@ const recipe = new Recipe(
             "Coarsely grind a light dusting of pepper onto a section of the work surface; it is easier to control the amount of pepper that will be rolled onto the grissini by keeping the area small. (Alternatively, omit the pepper and sprinkle the grissini with fleur de sel or seed.) Light brush the grissini with olive oil. One at a time, roll in the pepper and return to the parchment; grind additional pepper as needed. Repeat with the remaining dough. (The grissini can be held for up to an hour on the baking sheets in a cool spot. Or, to hold them longer, cover with parchment paper, wrap the baking sheets in plastic wrap, and refrigerate for up to 6 hours.",
             "Bake the grissini, switching the position of the pans and rotating them halfway through baking, until golden and crisp, 16 to 18 minutes. Cool on the pans in a rack. Store in an airtight container for up to 1 week."
             ],
-            "amount": "Makes 24 small or 12 large grissini",
+        "amount": "Makes 24 small or 12 large grissini",
         "recipeId": 4,
     },
 )
+
+/* use to save
+
+recipe.save().then(result => {
+  console.log('recipe saved!')
+  mongoose.connection.close()
+})
+
+*/
 
 if (process.argv.length < 4) {
     Recipe.find({}).then(result => {
@@ -77,7 +88,7 @@ if (process.argv.length < 4) {
     })
 } else {
     recipe.save().then(result => {
-        console.log(`added recipe to the cookbook`)
+        console.log(`added recipe to the database`)
         mongoose.connection.close()
     })
 }
