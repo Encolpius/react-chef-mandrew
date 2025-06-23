@@ -1,3 +1,34 @@
+// Normalize
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 solid;
+  font-family: "Roboto", sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+// End normalize 
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -9,10 +40,18 @@ body {
   width: 70%;
 }
 
-#root h1 {
-  font-size: 3.2em;
+#root a h1 {
+  font-size: 4.2em;
   line-height: 1.1;
   text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 .container {
@@ -81,8 +120,13 @@ body {
   text-align: center;
   margin-bottom: 6px;
   margin-top: 6px;
-  font-size: 30px;
   letter-spacing: 2px;
+  font-weight: 700;
+}
+
+li {
+  font-size: 18px;
+  margin: 6px 0;
 }
 
 #nav ul {
@@ -94,7 +138,7 @@ body {
 
 #nav ul li {
   display: inline;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -107,11 +151,14 @@ body {
 
 .ingredients-list > * {
   padding: 5px 5px 5px 0;
+  font-size: 14px;
 }
 
 .amount {
   text-align: right;
 }
+
+// Media Queries
 
 @media (max-width: 1500px) {
   .container {
