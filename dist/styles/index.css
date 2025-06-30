@@ -11,6 +11,10 @@
   font-family: "Roboto", sans-serif
 }
 
+html {
+  overflow-y: scroll;
+}
+
 h1,
 h2,
 h3,
@@ -105,6 +109,7 @@ h3 {
 .recipe-summary {
   padding: 12px 44px 0 44px;
   line-height: 28px;
+  font-size: 20px;
 }
 
 .recipe-instructions-list > * {
@@ -152,6 +157,11 @@ li {
 .ingredients-list > * {
   padding: 5px 5px 5px 0;
   font-size: 14px;
+}
+
+.ingredient-link {
+  color: blue;
+  font-weight: 700;
 }
 
 .amount {
