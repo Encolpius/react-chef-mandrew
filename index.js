@@ -16,6 +16,18 @@ app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
 
+app.get('/cookbooks', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
+app.get('/cookbooks/:cookbookName/recipe/:recipeId', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
+app.get('/cookbooks/:cookbookName', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
 app.get('/home', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
@@ -29,7 +41,7 @@ app.get('/api/cookbooks', (request, response) => {
 })
 
 app.get('/about-me', (request, response) => {
-    response.sendFile(path.join(__dirname, 'dist', 'about-me.html')); 
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
 
 app.get('/api/cookbooks/:cookbookName/', (request, response) => {
