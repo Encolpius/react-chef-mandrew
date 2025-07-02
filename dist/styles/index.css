@@ -153,6 +153,7 @@ li {
   list-style-type: none;
   justify-content: space-evenly;
   align-items: center;
+  padding-inline-start: 0px;
 }
 
 #nav ul li {
@@ -213,7 +214,12 @@ li {
 
 .cookbook-img:hover {
   transform: scale(1.15);
-  transition: transform .2s;
+  transition: transform .2s ease-in-out;
+}
+
+.cookbook-img:not(:hover) {
+  transform: scale(1);
+  transition: transform .2s ease-in-out;
 }
 
 @media (max-width: 1500px) {
@@ -251,11 +257,6 @@ li {
 
   .ingredients-list-container {
     flex: 1 2;
-  }
-
-  #nav ul {
-    flex-direction: column;
-    padding-left: 0;
   }
 
   #nav li {
