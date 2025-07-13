@@ -20,6 +20,7 @@ mongoose.set('strictQuery', false)
 
 const recipeSchema = new mongoose.Schema({
     title: String,
+    originalTitle: String,
     name: String,
     summary: String,
     ingredients: Array,
@@ -35,34 +36,27 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
-        "title": "ad-hoc-at-home",
-        "name": "Candied Pecans",
-        "summary": "",
+        "title": "bouchon",
+        "originalTitle": "Bouchon",
+        "name": "Garlic Confit",
+        "summary": "At the restaurant, garlic confit is used in so many preparations that we consider it to be a pantry staple. It's such a great flavoring device for everything from shellfish to mashed potatoes, or to be stirred into soup or spread on a baguette for a tartine. The oil the garlic is cooked in can be used as well.",
         "ingredients": [
-            "3 cups raw pecan halves",
-            "3 tablespoons clover honey",
-            "3/4 tespoon ground fleur de sel or fine sea salt, plus a pinch",
+            "1 cup peeled garlic cloves (about 45)",
+            "about 2 cups canola oil"
         ],
         "originalInstructions": [
-            "Position the racks in the upper and lower thirds of the oven and preheat the oven to 250 degrees.",
-            "Line a baking sheet with parchment paper and spread the nuts on the pan. Warm in the oven for 5 minutes (warming the nuts helps prevent them from crystallizing the honey)",
-            "Meanwhile, pour the honey into a small saucepan and warm over medium heat.",
-            "Pour the nuts into a bowl, add the honey, and sprinkle with a pinch of salt. Stir the nuts evenly with the honey.",
-            "Line two baking sheets with SilPats and spread the nuts on the sheets. Sprinkle with the remaining 3/4 teaspoon salt. Bake for two hours, rotating the pans halfway through baking.",
-            "Remove the pans from the oven and separate any nuts that cling together. Let the nuts cool on the pans.",
-            "Store in an airtight container for up to 1 week."
+            "Cut off and discard the root ends of the garlic cloves. Place the cloves in a small saucepan and add enough oil to cove them by one inch - none of the garlic cloves should be poking through the oil.",
+            "Place the saucepan on a diffuser over medium-low heat. The cloves should cook gently: Very small bubbles will come up through the oil, but the bubbles should not break the surface. Adjust the heat as necessary and move the pan to one side of the diffuser if it is cooking too quickly. Cook the garlic for about 40 minutes, stirring every 5 minutes or so, until the closed are completely tender when pierces with the tip of a knife. Remove the saucepan from the heat and allow the garlic to cool in the oil.",
+            "Refrigerate the garlic, submerged in the oil, for up to one month."
         ],
         "updatedInstructions": [
-             "Position the racks in the upper and lower thirds of the oven and preheat the oven to 250 degrees.",
-            "Line a baking sheet with parchment paper and spread the nuts on the pan. Warm in the oven for 5 minutes (warming the nuts helps prevent them from crystallizing the honey)",
-            "Meanwhile, pour the honey into a small saucepan and warm over medium heat.",
-            "Pour the nuts into a bowl, add the honey, and sprinkle with a pinch of salt. Stir the nuts evenly with the honey.",
-            "Line two baking sheets with SilPats and spread the nuts on the sheets. Sprinkle with the remaining 3/4 teaspoon salt. Bake for two hours, rotating the pans halfway through baking.",
-            "Remove the pans from the oven and separate any nuts that cling together. Let the nuts cool on the pans.",
-            "Store in an airtight container for up to 1 week."
+            "Cut off and discard the root ends of the garlic cloves. Place the cloves in a small saucepan and add enough oil to cove them by one inch - none of the garlic cloves should be poking through the oil.",
+            "Place the saucepan on a diffuser over medium-low heat. The cloves should cook gently: Very small bubbles will come up through the oil, but the bubbles should not break the surface. Adjust the heat as necessary and move the pan to one side of the diffuser if it is cooking too quickly. Cook the garlic for about 40 minutes, stirring every 5 minutes or so, until the closed are completely tender when pierces with the tip of a knife. Remove the saucepan from the heat and allow the garlic to cool in the oil.",
+            "Refrigerate the garlic, submerged in the oil, for up to one month.",
+            "IMPORTANT: Do not treat this recipe lightly. Garlic placed in an anaerobic environment (the oil) can lead to botulism poisoning if not treated and cooked properly. Make sure to place a date on the container the garlic confit is placed in to indicate when the remaining confit should be discarded."
             ],
-        "amount": "Makes 24 small or 12 large grissini",
-        "recipeId": 4,
+        "amount": "Makes 1 cup",
+        "recipeId": 2,
     },
 )
 

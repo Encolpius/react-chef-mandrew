@@ -32,6 +32,10 @@ app.get('/home', (request, response) => {
     response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
 })
 
+app.get('/create-new', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html')); 
+})
+
 app.get('/api/cookbooks', (request, response) => {
     Recipe.aggregate([
         { $group: { _id: '$title', count: {$sum: 1}} }
