@@ -36,27 +36,32 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
-        "title": "bouchon",
-        "originalTitle": "Bouchon",
-        "name": "Garlic Confit",
-        "summary": "At the restaurant, garlic confit is used in so many preparations that we consider it to be a pantry staple. It's such a great flavoring device for everything from shellfish to mashed potatoes, or to be stirred into soup or spread on a baguette for a tartine. The oil the garlic is cooked in can be used as well.",
+        "title": "mastering-the-art-of-french-cooking",
+        "originalTitle": "Mastering the Art of French Cooking",
+        "name": "Potage Parmentier (Leek or Onion and Potato Soup)",
+        "summary": "Leek and potato soup smells good, tastes good, and is simplicity itself to make. It is also versatile as a soup base; add water cress and you have a water-cress soup, or str in cream and chill it for a vichyssoise. To change the formula a bit, add carrots, string beans, cauliflower, broccoli, or anything else you think would go with it, and vary the proportions as you wish.",
         "ingredients": [
-            "1 cup peeled garlic cloves (about 45)",
-            "about 2 cups canola oil"
+            "3-to-4 quart saucepan or pressure cooker",
+            "3 to 4 cups or 1 lb peeled potatoes, sliced or diced",
+            "3 cups or 1 lb thinly sliced leeks including the tender green; or yellow onions",
+            "2 quarts of water",
+            "1 tb salt",
+            "-",
+            "4 to 6 tablespoons whipping cream or 2 to 3 tablespoons softened butter",
+            "2 to 3 tablespoons minced parsley or chives"
         ],
         "originalInstructions": [
-            "Cut off and discard the root ends of the garlic cloves. Place the cloves in a small saucepan and add enough oil to cove them by one inch - none of the garlic cloves should be poking through the oil.",
-            "Place the saucepan on a diffuser over medium-low heat. The cloves should cook gently: Very small bubbles will come up through the oil, but the bubbles should not break the surface. Adjust the heat as necessary and move the pan to one side of the diffuser if it is cooking too quickly. Cook the garlic for about 40 minutes, stirring every 5 minutes or so, until the closed are completely tender when pierces with the tip of a knife. Remove the saucepan from the heat and allow the garlic to cool in the oil.",
-            "Refrigerate the garlic, submerged in the oil, for up to one month."
+            "Either simmer the vegetables, water, and salt together, partially covered, for 40 to 50 minutes until the vegetables are tender; or cook under 15 pounds pressure for 5 minutes, release pressure, and simmer uncovered for 15 minutes.",
+            "Mash the vegetables in the soup with a fork, or pass the soup through a food mill. Correct seasoning. Set aside uncovered until just before serving, then reheat to a simmer.",
+            "Off heat and just before serving, stir in the cream or butter by spoonfuls. Pour into a tureen or soup cups and decorate with the herbs."
         ],
         "updatedInstructions": [
-            "Cut off and discard the root ends of the garlic cloves. Place the cloves in a small saucepan and add enough oil to cove them by one inch - none of the garlic cloves should be poking through the oil.",
-            "Place the saucepan on a diffuser over medium-low heat. The cloves should cook gently: Very small bubbles will come up through the oil, but the bubbles should not break the surface. Adjust the heat as necessary and move the pan to one side of the diffuser if it is cooking too quickly. Cook the garlic for about 40 minutes, stirring every 5 minutes or so, until the closed are completely tender when pierces with the tip of a knife. Remove the saucepan from the heat and allow the garlic to cool in the oil.",
-            "Refrigerate the garlic, submerged in the oil, for up to one month.",
-            "IMPORTANT: Do not treat this recipe lightly. Garlic placed in an anaerobic environment (the oil) can lead to botulism poisoning if not treated and cooked properly. Make sure to place a date on the container the garlic confit is placed in to indicate when the remaining confit should be discarded."
+            "Either simmer the vegetables, water, and salt together, partially covered, for 40 to 50 minutes until the vegetables are tender; or cook under 15 pounds pressure for 5 minutes, release pressure, and simmer uncovered for 15 minutes.",
+            "Mash the vegetables in the soup with a fork, or pass the soup through a food mill. Correct seasoning. Set aside uncovered until just before serving, then reheat to a simmer.",
+            "Off heat and just before serving, stir in the cream or butter by spoonfuls. Pour into a tureen or soup cups and decorate with the herbs."
             ],
-        "amount": "Makes 1 cup",
-        "recipeId": 2,
+        "amount": "For about 2 quarts serving 6 to 8 people",
+        "recipeId": 1,
     },
 )
 
