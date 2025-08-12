@@ -36,42 +36,56 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
-        "title": "mastering-the-art-of-french-cooking",
-        "originalTitle": "Mastering the Art of French Cooking",
-        "name": "Potage Parmentier (Leek or Onion and Potato Soup)",
-        "summary": "Leek and potato soup smells good, tastes good, and is simplicity itself to make. It is also versatile as a soup base; add water cress and you have a water-cress soup, or str in cream and chill it for a vichyssoise. To change the formula a bit, add carrots, string beans, cauliflower, broccoli, or anything else you think would go with it, and vary the proportions as you wish.",
+        "title": "step-by-step-instant-pot",
+        "originalTitle": "The Step By Step Instant Pot Cookbook",
+        "name": "Sticky Nashville Hot Chicken and Rice",
+        "summary": "Oooo-EEEE! Nashville hot chicken takes classic fried chicken and amps the spice up to 11. Since the Instant Pot can't deep-fry, I created this seared chicken-and-rice dish with a sauce inspired by its umistakable spiciness. If you're not a fan of the extreme heat, feel free to take it easy on the spices - it'll still be delicious.",
         "ingredients": [
-            "3-to-4 quart saucepan or pressure cooker",
-            "3 to 4 cups or 1 lb peeled potatoes, sliced or diced",
-            "3 cups or 1 lb thinly sliced leeks including the tender green; or yellow onions",
-            "2 quarts of water",
-            "1 tb salt",
+            "THE CHICKEN & RICE",
+            "2 tablespoons vegetable oil",
+            "2 tablespoons (1/4 stick) salted butter",
+            "1 Vidalia (sweet) onion, diced",
+            "2 pounds boneless, skinless chicken thighs, cut into bite-sized pieces",
+            "6 cloves garlic, minced or pressed",
+            "2 cups chicken broth, divided",
+            "2 cups jasmine rice, rinsed and drained",
+            "1 bunch scallions, thinly sliced",
             "-",
-            "4 to 6 tablespoons whipping cream or 2 to 3 tablespoons softened butter",
-            "2 to 3 tablespoons minced parsley or chives"
+            "THE NASHVILLE HOT SAUCE",
+            "2/3 cup hot sauce (Frank's RedHot)",
+            "1/3 cup vegetable oil",
+            "1 tablespoon brown sugar",
+            "1 tablespoon cayenne pepper",
+            "2 teaspoons smoked or sweet paprika",
+            "1 teaspoon chili powder",
+            "1 teaspoon garlic powder"
         ],
         "originalInstructions": [
-            "Either simmer the vegetables, water, and salt together, partially covered, for 40 to 50 minutes until the vegetables are tender; or cook under 15 pounds pressure for 5 minutes, release pressure, and simmer uncovered for 15 minutes.",
-            "Mash the vegetables in the soup with a fork, or pass the soup through a food mill. Correct seasoning. Set aside uncovered until just before serving, then reheat to a simmer.",
-            "Off heat and just before serving, stir in the cream or butter by spoonfuls. Pour into a tureen or soup cups and decorate with the herbs."
+            "On the Instant Pot, hit Saute and adjust so it's on More or High. Place the oil and butter in the pot. Once the butter has melted, add the onion and saucte until softened and just beginning to brown, 2-3 minutes.",
+            "Add the chicken and garlic and saute for another 2-3 minutes, until the chicken has just begun to turn pinkish-white around the edges.",
+            "Pour in 1/2 cup of the broth and scrape up the browned bits from the bottom of the pot with a wooden spoon. Add the rice and remaining broth and stir.",
+            "Secure the lid, turn the valve to the sealing position, hit Keep Warm/Cancel and then Manual or Pressure Cook on High Pressure for 3 mionutes. When done, allow a 10-minutes natural release and finish with a quick release.",
+            "Meanwhile, make the Nashville Hot Sauce by whisking together all the ingredients.",
+            "When the pot's done, fluff the rice with a fork, add in the sauce, and mix well until the chicken and rice are coated. Top with scallions and serve."
         ],
         "updatedInstructions": [
-            "Either simmer the vegetables, water, and salt together, partially covered, for 40 to 50 minutes until the vegetables are tender; or cook under 15 pounds pressure for 5 minutes, release pressure, and simmer uncovered for 15 minutes.",
-            "Mash the vegetables in the soup with a fork, or pass the soup through a food mill. Correct seasoning. Set aside uncovered until just before serving, then reheat to a simmer.",
-            "Off heat and just before serving, stir in the cream or butter by spoonfuls. Pour into a tureen or soup cups and decorate with the herbs."
-            ],
-        "amount": "For about 2 quarts serving 6 to 8 people",
+            "On the Instant Pot, hit Saute and adjust so it's on More or High. Place the oil and butter in the pot. Once the butter has melted, add the onion and saucte until softened and just beginning to brown, 2-3 minutes.",
+            "Add the chicken and garlic and saute for another 2-3 minutes, until the chicken has just begun to turn pinkish-white around the edges.",
+            "Pour in 1/2 cup of the broth and scrape up the browned bits from the bottom of the pot with a wooden spoon. Add the rice and remaining broth and stir.",
+            "Secure the lid, turn the valve to the sealing position, hit Keep Warm/Cancel and then Manual or Pressure Cook on High Pressure for 3 mionutes. When done, allow a 10-minutes natural release and finish with a quick release.",
+            "Meanwhile, make the Nashville Hot Sauce by whisking together all the ingredients.",
+            "When the pot's done, fluff the rice with a fork, add in the sauce, and mix well until the chicken and rice are coated. Top with scallions and serve."
+        ],
+        "amount": "Serves 4-6",
         "recipeId": 1,
     },
 )
 
 /* use to save
-
 recipe.save().then(result => {
   console.log('recipe saved!')
   mongoose.connection.close()
 })
-
 */
 
 if (process.argv.length < 4) {
