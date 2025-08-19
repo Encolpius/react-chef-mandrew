@@ -317,7 +317,7 @@ a {
 
 .hero {
   width: 100%;
-  background-image: url("https://www.seriouseats.com/thmb/T5v_t4ZE06pasVLee8VYwkoG9Ec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/perfect-soft-boiled-eggs-hero-05_1-7680c13e853046fd90db9e277911e4e8.JPG");
+  background-image: url("https://bellyfull.net/wp-content/uploads/2025/03/Hard-Boiled-Eggs-hero-1.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -392,6 +392,10 @@ input, select {
   #root {
     width: 100%;
     min-width: 300px;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .hero-left {
