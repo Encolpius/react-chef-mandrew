@@ -72,6 +72,11 @@ ul {
   width: 80%;
 }
 
+.container h3 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .cookbook-name {
   text-align: center;
   margin-bottom: 6px;
@@ -101,6 +106,7 @@ ul {
 
 .recipe-list {
   margin-top: 24px;
+  padding-bottom: 40px;
 }
 
 .recipe-toggle > * {
@@ -394,8 +400,17 @@ input, select {
     min-width: 300px;
   }
 
+  .cookbook-card {
+    height: initial;
+    width: initial;
+  }
+
   .container {
     padding: 0;
+  }
+
+  .recipe-list {
+    padding-right: 40px;
   }
 
   .hero-left {
