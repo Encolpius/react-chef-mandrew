@@ -72,11 +72,6 @@ ul {
   width: 80%;
 }
 
-.container h3 {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
 .cookbook-name {
   text-align: center;
   margin-bottom: 6px;
@@ -323,7 +318,7 @@ a {
 
 .hero {
   width: 100%;
-  background-image: url("https://bellyfull.net/wp-content/uploads/2025/03/Hard-Boiled-Eggs-hero-1.jpg");
+  background-image: url("https://www.seriouseats.com/thmb/FbE-LpK0q4nJVo_jovLgZjihvxU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__06__20160605-crispy-fried-egg-6-64687805fcb1467cb71d07a1fcf2c868.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -398,6 +393,11 @@ input, select {
   #root {
     width: 100%;
     min-width: 300px;
+  }
+
+  .container h3 {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .cookbook-card {
