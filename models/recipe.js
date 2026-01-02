@@ -22,7 +22,7 @@ const recipeSchema = new mongoose.Schema({
     title: String,
     originalTitle: String,
     name: String,
-    summary: String,
+    summary: Array,
     ingredients: Array,
     originalInstructions: Array,
     updatedInstructions: Array,
@@ -38,23 +38,33 @@ const recipe = new Recipe(
     {
         "title": "the-food-lab",
         "originalTitle": "The Food Lab",
-        "name": 'Extra-Crispy Sunny-Side Up Eggs',
-        "summary": "",
+        "name": 'Diner-Style Ham and Cheese Omelet',
+        "summary": [
+            "It's important to cook fillings without cheese before you add them to the eggs, or they will not heat up enough while the omelet cooks. Then tossing the cheese with the cooked filling will help it get started melting, so that it's nice and gooey by the time the omelet is done, without the need to overcook your eggs."
+        ],
         "ingredients": [
-            "2 large eggd",
-            "3 tablespoons olive oil (extra-virgin, if you prefer",
-            "Kosher salt and freshly ground black pepper"
+            "5 large eggs",
+            "3/4 teaspoon kosher salt",
+            "1/4 teaspoon freshly ground black pepper",
+            "2 tablespoons unsalted butter",
+            "4 ounces ham steak, diced",
+            "2 ounces cheddar cheese, grated"
+
         ],
         "originalInstructions": [
-            "Break one egg into a small cup, then transfer to a fine-mesh strainer set over a bowl and swirl gently until one excess white passes through. Return the egg to the cup. Repeat with the second egg.",
-            "Heat the olive oil in a medium nonstick or cast-iron skillet over medium heat until it registers 300 degrees Fahrenheit on an instant-read thermometer. Carefully slip the eggs into the oil. Immediately tilt the skillet so that the oil pools on one side and use a spoon to spoon the hot oil over the egg whites, trying to avoid the yolks as much as possible. Continue doing this until the egg whites are completely set and crisp on the bottom, about 1 minute. With a spatula, transfer the eggs to a paper-towel-lined plate and season with salt and pepper. Serve immediately."
+            "Combine the eggs, salt, and pepper in a medium bowl and whisk until homoegenous and frothy, about 1 minute. Allow to rest at room temperature for at least 15 minutes. The eggs should darken in color significantly.",
+            "Meanwhile, melt 1 tablespoon of the butter in a 10-inch nonstick skillet and cook until lightly browned. Add the ham and cook, stirring frequently, until it has begun to brown on the edges, about 3 minutes. Transfer the ham to a small bowl, add the cheese, and toss to combine. Wipe out the skillet with a paper towel and return it to medium heat.",
+            "Add the remaining tablespoon of butter to the pan and cook until lightly browned. Rewhisk the eggs until foamy, then add to the skillet and cook, using a silicone sptaula to push the eggs in toward the center as they set and tilting the pan to spread the uncooked egg underneath. Continue pushing in the edges of the eggs and tilting the skillet, working all around the pan, until the omelet is almost set, about 45 seconds. Sprinkle the ham and cheese over half the omelet, remove from the heat, cover, and let the omelet sit until it reaches the desired consistency, about 1 minute.",
+            "Using the silicone spatula, loosen the edges of the omelet from the skillet and shake the skillet to ensure that it's not stuck. Carefully fold the omelet in half, then slide it onto a serving plate and serve immediately."
         ],
         "updatedInstructions": [
-            "Break one egg into a small cup, then transfer to a fine-mesh strainer set over a bowl and swirl gently until one excess white passes through. Return the egg to the cup. Repeat with the second egg.",
-            "Heat the olive oil in a medium nonstick or cast-iron skillet over medium heat until it registers 300 degrees Fahrenheit on an instant-read thermometer. Carefully slip the eggs into the oil. Immediately tilt the skillet so that the oil pools on one side and use a spoon to spoon the hot oil over the egg whites, trying to avoid the yolks as much as possible. Continue doing this until the egg whites are completely set and crisp on the bottom, about 1 minute. With a spatula, transfer the eggs to a paper-towel-lined plate and season with salt and pepper. Serve immediately."
+            "Combine the eggs, salt, and pepper in a medium bowl and whisk until homoegenous and frothy, about 1 minute. Allow to rest at room temperature for at least 15 minutes. The eggs should darken in color significantly.",
+            "Meanwhile, melt 1 tablespoon of the butter in a 10-inch nonstick skillet and cook until lightly browned. Add the ham and cook, stirring frequently, until it has begun to brown on the edges, about 3 minutes. Transfer the ham to a small bowl, add the cheese, and toss to combine. Wipe out the skillet with a paper towel and return it to medium heat.",
+            "Add the remaining tablespoon of butter to the pan and cook until lightly browned. Rewhisk the eggs until foamy, then add to the skillet and cook, using a silicone sptaula to push the eggs in toward the center as they set and tilting the pan to spread the uncooked egg underneath. Continue pushing in the edges of the eggs and tilting the skillet, working all around the pan, until the omelet is almost set, about 45 seconds. Sprinkle the ham and cheese over half the omelet, remove from the heat, cover, and let the omelet sit until it reaches the desired consistency, about 1 minute.",
+            "Using the silicone spatula, loosen the edges of the omelet from the skillet and shake the skillet to ensure that it's not stuck. Carefully fold the omelet in half, then slide it onto a serving plate and serve immediately."
         ],
-        "amount": "Serves 1",
-        "recipeId": 7,
+        "amount": "Makes 1 large omelet, serving 2",
+        "recipeId": 11,
     },
 )
 

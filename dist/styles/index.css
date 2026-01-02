@@ -83,6 +83,7 @@ ul {
   display: flex;
   flex: 1 2;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .recipe-instructions-container {
@@ -132,7 +133,7 @@ ul {
 }
 
 .recipe-summary {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   padding: 12px 44px 0 44px;
   line-height: 28px;
   font-size: 20px;
@@ -318,7 +319,7 @@ a {
 
 .hero {
   width: 100%;
-  background-image: url("https://www.seriouseats.com/thmb/FbE-LpK0q4nJVo_jovLgZjihvxU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__06__20160605-crispy-fried-egg-6-64687805fcb1467cb71d07a1fcf2c868.jpg");
+  background-image: url("https://www.seriouseats.com/thmb/TuOix8vfMlFnxZZCXHfYQKG8v2c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__04__20160418-american-omelet-ham-and-cheese-21-67641a326ac645ec81d03757a5478077.JPG");
   background-size: cover;
   background-position: center;
   height: 500px;
