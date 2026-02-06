@@ -59,11 +59,16 @@ ul {
   width: 70%;
 }
 
-#root a h1 {
+.main-header {
   font-size: 4.2em;
   line-height: 1.1;
   text-align: center;
   margin: 3rem 0 24px 0;
+  transition: transform 0.4s;
+}
+
+.main-header:hover {
+  transform: scale(1.1);
 }
 
 .container {
@@ -175,6 +180,16 @@ li {
   font-weight: 700;
 }
 
+#nav li {
+  margin: 12px;
+}
+
+#nav li:hover {
+  color: blue;
+  transition: 
+    color 0.5s;
+}
+
 .ingredients-list {
   list-style-type: none;
   padding-left: 0;
@@ -283,10 +298,6 @@ li {
 
   .ingredients-list-container {
     flex: 1 2;
-  }
-
-  #nav li {
-    margin: 12px;
   }
 
   .ingredients-list {
