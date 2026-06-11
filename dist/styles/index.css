@@ -45,7 +45,7 @@ h3 {
 }
 
 p {
-  margin: 12px;
+  margin: 12px 12px 12px 0;
   line-height: 20px;
 }
 
@@ -330,7 +330,7 @@ a {
 
 .hero {
   width: 100%;
-  background-image: url("https://www.seriouseats.com/thmb/TuOix8vfMlFnxZZCXHfYQKG8v2c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__04__20160418-american-omelet-ham-and-cheese-21-67641a326ac645ec81d03757a5478077.JPG");
+  background-image: url("https://www.seriouseats.com/thmb/GP7j-oCQH2g4MS1iNohv7j4ePn4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20220201-rosti-vicky-wasik-13-e39895340dbe48599747ed15f457f18e.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
