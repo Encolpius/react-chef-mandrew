@@ -80,15 +80,16 @@ ul {
 .cookbook-name {
   text-align: center;
   margin-bottom: 6px;
-  color: #c8c8c8;
   font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .recipe-container {
   display: flex;
   flex: 1 2;
   gap: 20px;
-  margin-top: 50px;
+  margin-top: 38px;
 }
 
 .recipe-instructions-container {
@@ -98,6 +99,7 @@ ul {
 
 .ingredients-list-container {
   flex: 1 0 280px;
+  padding-bottom: 16px;
 }
 
 .recipe-instructions-list,
@@ -159,6 +161,7 @@ ul {
   margin-top: 6px;
   letter-spacing: 2px;
   font-weight: 700;
+  padding: 12px;
 }
 
 li {
