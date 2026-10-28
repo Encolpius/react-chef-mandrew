@@ -36,37 +36,37 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
-        "title": "dishoom",
-        "originalTitle": "Dishoom",
-        "name": 'Jeera Biscuits',
+        "title": "ad-hoc-at-home",
+        "originalTitle": "Ad Hoc at Home",
+        "name": "Honey Glazed Cipollini Onions*",
         "summary": [
-            'These slightly sweet, slightly savory, pleasantly short and delightfully buttery biscuits are flecked with jeera (cumin seeds). They are sold in chai shops all over Bombay for a few rupees each. Such temptation!'
+            "Cipollini onions are milder than yellow or Spanish onions, and smaller, so they cook relatively quickly and can be served whole, two or three to a plate. They're also a sweeter onion, so you can serve them raw over salads, and roasting or sautéing them instensifies their sweetness. In this dish the sweetness is heightened by glazing. These are delicious with any grilled meats."
         ],
         "ingredients": [
-            "75g unsalted butter, softened to room temperature",
-            "25g caster sugar",
-            "100g plain (all-purpose) flour",
-            "1/2 teaspoon fine sea salt",
-            "1 teaspoon cumin seeds",
-            "1 teaspoon baking powder"
+            "1 3/4 pounds cipollini onions (about 14), about 2 inches in diameter",
+            "1 tablespoon canola oil",
+            "2 garlic cloves, lightly crushed, skin left on",
+            "4 thyme sprigs",
+            "1 tablespoon honey",
+            "1/2 cup chicken stock",
+            "Kosher salt and freshly ground black pepper"
         ],
         "originalInstructions": [
-            "Tip the butter and sugar into a large bowl and beat until light and fluffy.",
-            "Mix the flour, salt, cumin seeds and baking powder together, then tip into the creamed butter and sugar mixture. Mix to combine, gently bringing the dough together without overworking it. Form into a log shape, about 5cm in diameter, and wrap in cling film. Place in the fridge for 30 minutes.",
-            "Heat the oven to 200 celsius/Fan 180 celsius/Gas 6. Line a large baking sheet with baking parchment.",
-            "Remove the dough from the fridge, slice into discs, about 7-8mm thick, and lay on the lined baking sheet. Bake for 15 - 18 minutes, or until golden brown and cooked through.",
-            "Transfer the biscuits to a wire rack and leave to cool. They will keep in an airtight container for up to 2 days."
+            "Preheat the oven to 400 Fahrenheit.",
+            "Peel the onions. Cut the top of each onion to create a flat surface for browning. Trim the root ends. If any of the onions are noticeably larger than the rest, peel off an outer layer so they are closer in size.",
+            "Heat an ovenproof frying pan large enough to hold the onions in a single layer over medium heat. Add the canola oil and heat until warm. Add the onions cut-side-down and cook until browned, swirling the pan from time to time for even browning, about 6 minutes. Turn and cook to lightly brown the second side, about 4 minutes. Add the garlic, thyme, and honey to the pan. The honey will bubble up; once it stops, add the chicken stock and swirl the pan to incorporate. Increase the heat to medium-high and bring just to a boil.",
+            "Transfer to the oven and cook for 15 minutes, or until the onions are tender and the liquid has reduced to a thick glaze. Season to taste with salt and pepper.",
+            "Transfer the onions to a serving dish and spoon the glaze over the top."
         ],
         "updatedInstructions": [
-            "An hour before beginning, take the salt out of the fridge to warm up to room temperature.",
-            "Tip the butter and sugar into a large bowl and beat until light and fluffy, about 5 minutes, scraping the sides of the bowl as necessary (roughly every 2 minutes).",
-            "Mix the flour, salt, cumin seeds and baking powder together, then tip into the creamed butter and sugar mixture still in the stand mixer. Mix to combine, gently mixing the the ingredients at low speed until mixture looks smooth and comes together into the form of a dough. Add 1 - 2 tablespoons of milk as needed. Using a roller, shape the dough into a flat disc roughly 1/4-inch in thickness. Place in the fridge and chill for 30 minutes.",
-            "Preheat the oven to 365. Line a large baking sheet with a SilPat.",
-            "Remove the dough from the fridge and cut the dough into 2-inch circles using a cutter and lay on the SilPat. Bake for 10 minutes, then lower the oven temperature to 340 and bake for at least 5 minutes longer, more if you want crisiper biscuits (they may still feel soft when removed from the oven, but will harden). 9 minutes was a good, crispy length.",
-            "Transfer the biscuits to a wire rack and let cool. They will keep in an airtight container for up to 2 days."
+            "Preheat the oven to 400 Fahrenheit.",
+            "Peel the onions. Cut the top of each onion to create a flat surface for browning. Trim the root ends. If any of the onions are noticeably larger than the rest, peel off an outer layer so they are closer in size.",
+            "Heat an ovenproof frying pan large enough to hold the onions in a single layer over medium heat. Add the canola oil and heat until warm. Add the onions cut-side-down and cook until browned, swirling the pan from time to time for even browning, about 6 minutes. Turn and cook to lightly brown the second side, about 4 minutes. Add the garlic, thyme, and honey to the pan. The honey will bubble up; once it stops, add the chicken stock and swirl the pan to incorporate. Increase the heat to medium-high and bring just to a boil.",
+            "Transfer to the oven and cook for 15 minutes, or until the onions are tender and the liquid has reduced to a thick glaze. Season to taste with salt and pepper.",
+            "Transfer the onions to a serving dish and spoon the glaze over the top."
         ],
-        "amount": "SMakes 10-12",
-        "recipeId": 1,
+        "amount": "Serves 6",
+        "recipeId": 15,
     },
 )
 
@@ -79,8 +79,35 @@ recipe.save().then(result => {
 
 if (process.argv.length < 4) {
     Recipe.find({}).then(result => {
+        var totals = [];
+
         result.forEach(recipe => {
-            console.log(`name: ${recipe.name}, id: ${recipe.id}`)
+            var cookbook = totals.find(function(total) {
+                return total.title === recipe.originalTitle;
+            });
+
+            if (!cookbook) {
+                cookbook = {
+                    title: recipe.originalTitle,
+                    numberOfRecipes: 0,
+                    completedRecipes: 0,
+                    inProgressRecipes: 0
+                };
+
+                totals.push(cookbook);
+            }
+
+            cookbook.numberOfRecipes++;
+
+            if (/\*\s*$/.test(recipe.name)) {
+                    cookbook.inProgressRecipes++;
+                } else {
+                    cookbook.completedRecipes++;
+                }
+        });
+
+        totals.forEach(cookbook => {
+            console.log(cookbook)
         })
     })
 } else {
