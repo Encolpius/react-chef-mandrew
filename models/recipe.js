@@ -36,37 +36,47 @@ const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipe = new Recipe(
     {
-        "title": "ad-hoc-at-home",
-        "originalTitle": "Ad Hoc at Home",
-        "name": "Honey Glazed Cipollini Onions*",
+        "title": "king-arthur-baking-school",
+        "originalTitle": "King Arthur Baking School",
+        "name": "Lemon Shortbread Cookies*",
         "summary": [
-            "Cipollini onions are milder than yellow or Spanish onions, and smaller, so they cook relatively quickly and can be served whole, two or three to a plate. They're also a sweeter onion, so you can serve them raw over salads, and roasting or sautéing them instensifies their sweetness. In this dish the sweetness is heightened by glazing. These are delicious with any grilled meats."
+            "This is such a simple yet versatile cookie recipe, and over the years we've made it as a drop cookie, a rolled sandwich variation, and even a hand-formed tartlet - which is why we start with it and keep it separate from the other categories of cookies that follow. The butter here is fully creamed (as it would be for cake batter) to provide leavening for the cookie, so you'll notice there's no baking soda or powder. The confectioner's sugar makes for an incredibly tender, melt-in-your-mouth texture rather than the sandy texture you often find with shortbread. This cookie is butter-rich but not too sweet. If you like a sweeter cookie, dredge in granulated sugar before baking or confectioner's sugar after - or sandwich them together with sweet icing. Shortbread lends itself to any number of variations - you can change or omit the lemon zest, add different spices or extracts, or just leave it plain. Feel free to play with some of your favorite flavor combinations."
         ],
         "ingredients": [
-            "1 3/4 pounds cipollini onions (about 14), about 2 inches in diameter",
-            "1 tablespoon canola oil",
-            "2 garlic cloves, lightly crushed, skin left on",
-            "4 thyme sprigs",
-            "1 tablespoon honey",
-            "1/2 cup chicken stock",
-            "Kosher salt and freshly ground black pepper"
+            "227 grams (16 tablespoons) unsalted butter, room temperature",
+            "1/4 teaspoon salt",
+            "57 grams (1/2 cup) confectioner's sugar, plus more for garnish (optional)",
+            "Zest of 1 lemon",
+            "240 grams (2 cups) unbleached all-purpose flour, plus more for dusting"
         ],
         "originalInstructions": [
-            "Preheat the oven to 400 Fahrenheit.",
-            "Peel the onions. Cut the top of each onion to create a flat surface for browning. Trim the root ends. If any of the onions are noticeably larger than the rest, peel off an outer layer so they are closer in size.",
-            "Heat an ovenproof frying pan large enough to hold the onions in a single layer over medium heat. Add the canola oil and heat until warm. Add the onions cut-side-down and cook until browned, swirling the pan from time to time for even browning, about 6 minutes. Turn and cook to lightly brown the second side, about 4 minutes. Add the garlic, thyme, and honey to the pan. The honey will bubble up; once it stops, add the chicken stock and swirl the pan to incorporate. Increase the heat to medium-high and bring just to a boil.",
-            "Transfer to the oven and cook for 15 minutes, or until the onions are tender and the liquid has reduced to a thick glaze. Season to taste with salt and pepper.",
-            "Transfer the onions to a serving dish and spoon the glaze over the top."
+            "Line two baking sheets with parchment.",
+            "Combine the butter and salt in the bowl of a stand mixer and cream together until soft and fluffy.",
+            "Mix in the confectioner's sugar and lemon zest.",
+            "Add the flour and mix until well combined.",
+            "Transfer the dough to a lightly floured surface and pat it into a disc about 1-inch thick. Wrap the disc and chill for about 15 minutes, or until cool but not firm.",
+            "Preheat the oven to 350 Fahrenheit.",
+            "On a lightly floured surface, roll the dough to about 1/4-inch thick.",
+            "Using a 2-inch round cutter, cut shapes from the dough. Gather the scraps and continue to roll out and cut until you've used all the dough.",
+            "Place the shapes on the prepared baking sheets.",
+            "Bake the cookies for about 10 minutes, or until just golden around the edges.",
+            "After cooling, dust the cookies with confectioner's sugar, if desired."
         ],
         "updatedInstructions": [
-            "Preheat the oven to 400 Fahrenheit.",
-            "Peel the onions. Cut the top of each onion to create a flat surface for browning. Trim the root ends. If any of the onions are noticeably larger than the rest, peel off an outer layer so they are closer in size.",
-            "Heat an ovenproof frying pan large enough to hold the onions in a single layer over medium heat. Add the canola oil and heat until warm. Add the onions cut-side-down and cook until browned, swirling the pan from time to time for even browning, about 6 minutes. Turn and cook to lightly brown the second side, about 4 minutes. Add the garlic, thyme, and honey to the pan. The honey will bubble up; once it stops, add the chicken stock and swirl the pan to incorporate. Increase the heat to medium-high and bring just to a boil.",
-            "Transfer to the oven and cook for 15 minutes, or until the onions are tender and the liquid has reduced to a thick glaze. Season to taste with salt and pepper.",
-            "Transfer the onions to a serving dish and spoon the glaze over the top."
+            "Line two baking sheets with parchment.",
+            "Combine the butter and salt in the bowl of a stand mixer and cream together until soft and fluffy.",
+            "Mix in the confectioner's sugar and lemon zest.",
+            "Add the flour and mix until well combined.",
+            "Transfer the dough to a lightly floured surface and pat it into a disc about 1-inch thick. Wrap the disc and chill for about 15 minutes, or until cool but not firm.",
+            "Preheat the oven to 350 Fahrenheit.",
+            "On a lightly floured surface, roll the dough to about 1/4-inch thick.",
+            "Using a 2-inch round cutter, cut shapes from the dough. Gather the scraps and continue to roll out and cut until you've used all the dough.",
+            "Place the shapes on the prepared baking sheets.",
+            "Bake the cookies for about 10 minutes, or until just golden around the edges.",
+            "After cooling, dust the cookies with confectioner's sugar, if desired."
         ],
-        "amount": "Serves 6",
-        "recipeId": 15,
+        "amount": "Yields 3 dozen cookies",
+        "recipeId": 2,
     },
 )
 
